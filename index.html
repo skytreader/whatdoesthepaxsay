@@ -3,6 +3,7 @@
         <title>What Does the Pax Say? - By The Chad Estioco</title>
         <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="pax.js"></script>
     </head>
     <body>
         <h1 style="font-family: 'Amatic SC', cursive;">What Does the Pax Say?</h1>
@@ -11,12 +12,18 @@
         <br>
 
         <div style="font-family: 'Coming Soon', cursive">
-        Pax: Anong tawag sa buhok na pumuputok?<br>
-        Everyone: ...<br>
-        Pax: E di...BANGS!<br>
-        <br>
-        Chad's comment: Sa joke na yan ko nakilala si Pax. Antagal bago niya binitawan
-        yung punchline. Kahit si Jason napa-isip nun.
+            <script type="text/javascript">
+                var maxPax = paxJokes.length;
+                var randomJokeIndex = Math.floor(Math.random() * (maxPax));
+                var randomJoke = paxJokes[randomJokeIndex];
+                console.log("Joke index: " + randomJokeIndex);
+
+                document.writeln(randomJoke["joke"]);
+                document.write("<br><br>");
+                document.write(randomJoke["contributor"] + "'s comment: " + randomJoke["comment"]);
+            </script>
         </div>
+        <hr>
+        <h2 style="font-family: 'Amatic SC', cursive;">Kaya pa? Hit "Refresh"</h2>
     </body>
 </html>
